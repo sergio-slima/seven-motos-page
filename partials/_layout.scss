@@ -44,13 +44,13 @@
   h1{
     text-align: center;
     line-height: 150%;
-    max-width: 940px;
-    font-size: 46px;
+    max-width: 900px;
+    font-size: 36px;
   }
 
   p{
     text-align: center;
-    margin:14px 0;
+    margin: 14px 0;
   }
 }
 
@@ -183,8 +183,6 @@
   flex:1;
   display: flex;
   flex-direction: column;
-  width: calc(33.33% - 10px);
-  margin: 5px; 
   background-color: $white-normal;
   border-radius: 8px;
   box-shadow: 0px -1px 17px -4px rgba(0,0,0, 0.45);
@@ -228,7 +226,7 @@
   }
 
   .haircut img{
-    max-width: 740px;
+    max-width: 700px;
   }
 }
 
@@ -304,6 +302,12 @@
   .btn-whatsapp{
     img{
       max-width: 64px;
+    }
+  }
+
+  footer {
+    p {
+      font-size: 12px;
     }
   }
 }

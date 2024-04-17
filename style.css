@@ -25,6 +25,8 @@ i {
   gap: 14px;
   width: 200px;
   margin-top: 18px;
+  align-items: center;
+  justify-content: center;
 }
 
 .header-icons a:hover i {
@@ -48,6 +50,9 @@ i {
 }
 
 .header-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid #FFF;
   padding: 8px 24px;
   border-radius: 4px;
@@ -118,8 +123,8 @@ i {
 .hero h1 {
   text-align: center;
   line-height: 150%;
-  max-width: 940px;
-  font-size: 46px;
+  max-width: 900px;
+  font-size: 36px;
 }
 .hero p {
   text-align: center;
@@ -237,8 +242,6 @@ i {
   flex: 1;
   display: flex;
   flex-direction: column;
-  width: calc(33.33% - 10px);
-  margin: 5px;
   background-color: #FFF;
   border-radius: 8px;
   box-shadow: 0px -1px 17px -4px rgba(0, 0, 0, 0.45);
@@ -278,7 +281,7 @@ i {
     flex-direction: column;
   }
   .haircut img {
-    max-width: 740px;
+    max-width: 700px;
   }
 }
 .footer {
@@ -339,6 +342,9 @@ i {
 @media screen and (max-width: 768px) {
   .btn-whatsapp img {
     max-width: 64px;
+  }
+  footer p {
+    font-size: 12px;
   }
 }
 body {

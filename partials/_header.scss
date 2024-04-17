@@ -18,6 +18,8 @@ i{
   gap: 14px;
   width: 200px;
   margin-top: 18px; 
+  align-items: center;
+  justify-content: center; 
 }
 
 .header-icons a:hover{
@@ -44,12 +46,15 @@ i{
 }
 
 .header-button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid $white-normal;
   padding: 8px 24px;
   border-radius: 4px;
   color: $white-normal;
   background-color: transparent;
-  transition: background-color 0.8s;
+  transition: background-color 0.8s;   
 }
 
 .header-button:hover{
