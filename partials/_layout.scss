@@ -129,6 +129,7 @@
   h2{
     font-size: 38px;
     margin-bottom: 24px;
+    text-transform: uppercase;
   }
 
   p{
@@ -228,6 +229,116 @@
   .haircut img{
     max-width: 700px;
   }
+}
+
+// ---------------------------------
+
+// MARCAS
+
+.marcas {
+  background-color: $white-normal;
+  color: $black-normal;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 54px 14px;
+}
+
+.marcas-content h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 38px;
+  margin-bottom: 14px;
+}
+
+.marcas-content p {
+  line-height: 150%;
+  margin-bottom: 14px;
+  text-align: center;
+  max-width: 780px;
+}
+
+.marcas .clients-grid {
+  list-style: none;
+  overflow: hidden;
+}
+
+.marcas .clients-grid.grid-6 li {
+  width: 16.66%;
+}
+
+.marcas .clients-grid li {
+  float: left;
+  position: relative;
+  padding: 20px 0;
+}
+
+.marcas .clients-grid li a,
+.marcas .clients-grid li img {
+  display: block;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.marcas .clients-grid li a img {
+  width: 100%;
+}
+
+.marcas .clients-grid li a {
+  opacity: 0.6;
+}
+
+.marcas .clients-grid li a:hover {
+  opacity: 1;
+}
+
+.marcas .clients-grid li:before {
+  height: 100%;
+  top: 0;
+  left: -1px;
+  border-left: 1px dashed #DDD;
+}
+
+.marcas .clients-grid li:after {
+  width: 100%;
+  height: 0;
+  top: auto;
+  left: 0;
+  bottom: -1px;
+  border-bottom: 1px dashed #DDD;
+}
+
+.marcas .clients-grid li:before,
+.marcas .clients-grid li:after {
+  content: '';
+  position: absolute;
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .clients-grid:not(.grid-3):not(.grid-2) li, .clients-grid.grid-4 li, .clients-grid.grid-6 li {
+      width: 33.33%;
+  }
+}
+
+@media (max-width: 575px) {
+  .clients-grid:not(.grid-3):not(.grid-2) li, .clients-grid.grid-4 li, .clients-grid.grid-6 li {
+      width: 50%;
+  }
+}
+
+// ---------------------------------
+
+// MAPS
+
+.maps h2{
+  background-color: $white-normal;
+  color: $black-normal;  
+  text-transform: uppercase;
+  text-align: center;
+  padding: 24px 12px;
+  font-size: 38px;
 }
 
 //----------------------
