@@ -33,7 +33,7 @@
 
 .hero{
   color: $white-normal;
-  min-height: 80vh;
+  min-height: 50vh;
 
   display: flex;
   flex-direction: column;
@@ -55,6 +55,7 @@
 }
 
 .button-contact{
+  display: flex;
   padding: 14px 28px;
   color: $white-normal;
   background-color: $red-normal;
@@ -62,6 +63,7 @@
   font-size: 18px;
   font-weight: 600;
   margin: 14px 0;
+  margin-top: 50px;
 }
 
 .button-contact:hover{
@@ -82,15 +84,10 @@
     min-height: 60vh;
 
     h1{
-      font-size: 34px;
+      font-size: 22px;
       padding: 0 14px;
       width: 100%;
-    }
-
-    p{
-      font-size: 14px;
-    }
-    
+    }    
   }
 }
 
@@ -325,6 +322,91 @@
 @media (max-width: 575px) {
   .clients-grid:not(.grid-3):not(.grid-2) li, .clients-grid.grid-4 li, .clients-grid.grid-6 li {
       width: 50%;
+  }
+}
+
+// ---------------------------------
+
+// GALERIA
+
+.galeria h2{
+  background-color: $white-normal;
+  color: $black-normal;  
+  text-transform: uppercase;
+  text-align: center;
+  padding: 24px 12px;
+  font-size: 38px;
+}
+
+section.carrossel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: $white-normal;
+}
+
+.carousel {
+  position: relative;
+  max-width: 100%;
+  width: 80%;
+  height: 400px;
+  overflow: hidden;
+  border: 2px solid $primary-normal;
+  border-radius: 10px;
+  background-color: $primary-normal;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-item {
+  min-width: 100%;
+  transition: opacity 0.5s ease;
+  padding: 2px;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 400px;
+  border-radius: 10px;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+@media (min-width: 768px) {
+  .carousel-inner {
+      flex-wrap: nowrap;
+  }
+  .carousel-item {
+      min-width: calc(100% / 3); /* Mostra três itens lado a lado */
+  }
+}
+
+@media (max-width: 767px) {
+  .carousel-item {
+      min-width: 100%;
   }
 }
 

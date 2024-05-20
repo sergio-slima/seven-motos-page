@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -47,6 +48,7 @@ i {
   align-items: center;
   justify-content: center;
   margin-top: 18px;
+  width: 25%;
 }
 
 .header-button {
@@ -78,7 +80,7 @@ i {
     font-size: 34px;
   }
   .header-logo img {
-    width: 160px;
+    width: 220px;
     margin-top: 46px;
   }
   .header-button {
@@ -113,7 +115,7 @@ i {
 
 .hero {
   color: #FFF;
-  min-height: 80vh;
+  min-height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -132,6 +134,7 @@ i {
 }
 
 .button-contact {
+  display: flex;
   padding: 14px 28px;
   color: #FFF;
   background-color: #0270FE;
@@ -139,6 +142,7 @@ i {
   font-size: 18px;
   font-weight: 600;
   margin: 14px 0;
+  margin-top: 50px;
 }
 
 .button-contact:hover {
@@ -158,12 +162,9 @@ i {
     min-height: 60vh;
   }
   .hero h1 {
-    font-size: 34px;
+    font-size: 22px;
     padding: 0 14px;
     width: 100%;
-  }
-  .hero p {
-    font-size: 14px;
   }
 }
 @media screen and (max-width: 480px) {
@@ -374,6 +375,85 @@ i {
 @media (max-width: 575px) {
   .clients-grid:not(.grid-3):not(.grid-2) li, .clients-grid.grid-4 li, .clients-grid.grid-6 li {
     width: 50%;
+  }
+}
+.galeria h2 {
+  background-color: #FFF;
+  color: #232224;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 24px 12px;
+  font-size: 38px;
+}
+
+section.carrossel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: #FFF;
+}
+
+.carousel {
+  position: relative;
+  max-width: 100%;
+  width: 80%;
+  height: 400px;
+  overflow: hidden;
+  border: 2px solid #06121e;
+  border-radius: 10px;
+  background-color: #06121e;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-item {
+  min-width: 100%;
+  transition: opacity 0.5s ease;
+  padding: 2px;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 400px;
+  border-radius: 10px;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+@media (min-width: 768px) {
+  .carousel-inner {
+    flex-wrap: nowrap;
+  }
+  .carousel-item {
+    min-width: 33.3333333333%; /* Mostra três itens lado a lado */
+  }
+}
+@media (max-width: 767px) {
+  .carousel-item {
+    min-width: 100%;
   }
 }
 .maps h2 {
