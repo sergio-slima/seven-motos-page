@@ -386,6 +386,13 @@ i {
   font-size: 38px;
 }
 
+.galeria p {
+  line-height: 150%;
+  margin-bottom: 14px;
+  text-align: center;
+  max-width: 780px;
+}
+
 section.carrossel {
   display: flex;
   flex-direction: column;
