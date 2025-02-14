@@ -493,6 +493,29 @@ section.carrossel {
   color: #0270FE;
 }
 
+.footer .footer-dev {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer .footer-dev .devapp {
+  font-size: 1.5rem;
+  padding: 5px 15px;
+  background-color: white;
+  margin-top: 3px;
+}
+
+.footer .footer-dev .devapp {
+  color: black;
+  font-weight: bold;
+}
+
+.footer .footer-dev .devapp span {
+  color: #28a745;
+}
+
 .btn-whatsapp {
   position: fixed;
   bottom: 14px;
