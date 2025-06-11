@@ -11,6 +11,8 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
   <link rel="stylesheet" href="style.css" />
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
@@ -218,6 +220,61 @@
     </div>
   </section>
 
+  <!-- DEPOIMENTOS -->
+
+  <section class="testimonials-section">
+    <div class="testimonials-title">
+      <h2>Depoimentos</h2>
+      <p>O que falam sobre a gente</p>
+    </div>
+
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+          <h4>Eduardo Gomes</h4>
+          <p>
+            “Atendimento muito bom, é um trabalho excelente.”
+          </p>
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <h4>Camila Morais</h4>
+          <p>
+            “Melhor atendimento da cidade, serviços de qualidade e excelência.”
+          </p>
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide">
+          <h4>Edinaldo Gomes</h4>
+          <p>
+            “Serviço de qualidade.”
+          </p>
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="swiper-slide">
+          <h4>Mateus Lima</h4>
+          <p>
+            “A melhor oficina de moto da cidade, com os melhores especialistas.”
+          </p>
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+        </div>
+
+      </div>
+
+      <!-- Botões de navegação -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </section>
+
   <!-- GALERIA -->
 
   <section class="carrossel">
@@ -417,7 +474,9 @@
     <span class="tooltip-text">Entrar em Contato</span>
   </a>
 
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
   <script src="script.js"></script>
+
 </body>
 </html>
