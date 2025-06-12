@@ -220,6 +220,33 @@
     </div>
   </section>
 
+  <!-- GAMES -->
+
+  <section class="games-section">
+    <div class="games-title">
+      <h2>Seven Games</h2>
+      <p>Se divirta e ganhe descontos com os jogos da Seven Motos</p>
+    </div>
+
+    <div class="ranking">
+      <h3>Ranking Seven Games</h3>
+      <ul id="ranking-list">
+        <!-- Exemplo de item -->
+        <!--
+        <li>
+          <img src="avatar.jpg" alt="Avatar" />
+          <span class="name">João Silva</span>
+          <span class="points">120 pts</span>
+        </li>
+        -->
+      </ul>
+    </div>
+
+    <div class="participar">
+      <button id="login-google">Participar do Seven Games com Google</button>
+    </div>
+  </section>
+
   <!-- DEPOIMENTOS -->
 
   <section class="testimonials-section">
@@ -475,6 +502,12 @@
   </a>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Firebase SDK (adicione no head ou antes do </body>) -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js"></script>
+
+  <script type="module" src="games.js"></script>
 
   <script src="script.js"></script>
 

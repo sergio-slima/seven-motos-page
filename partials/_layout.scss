@@ -327,6 +327,73 @@
 
 // ---------------------------------
 
+// GAMES
+
+.games-section {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #06121e;
+}
+
+.games-title h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 38px;
+  margin-bottom: 14px;
+  color: white;
+}
+
+.games-title p {
+  line-height: 150%;
+  margin-bottom: 28px;
+  text-align: center;
+  color: white;
+  // max-width: 780px;
+}
+
+.ranking h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: white;
+}
+
+#ranking-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+#ranking-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  border-radius: 10px;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+#ranking-list img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.participar button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  font-size: 1rem;
+  background-color: #0270FE;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+// ---------------------------------
+
 // DEPOIMENTOS
 
 .testimonials-section {
