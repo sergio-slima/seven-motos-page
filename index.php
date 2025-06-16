@@ -1,8 +1,24 @@
+<?php
+require_once '../config.php';
+
+$conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+
+if (!$conn->connect_error) {
+    $pagina = 'index';
+    $ip = $_SERVER['REMOTE_ADDR'];
+    $conn->query("INSERT INTO acessos (pagina, ip) VALUES ('$pagina', '$ip')");
+}
+
+$result = $conn->query("SELECT COUNT(*) AS total FROM acessos WHERE pagina = 'index'");
+$total = $result ? $result->fetch_assoc()['total'] : 0;
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css?v=<?= filemtime('style.css') ?>">
 
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -13,7 +29,6 @@
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
-  <link rel="stylesheet" href="style.css" />
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 
@@ -231,19 +246,12 @@
     <div class="ranking">
       <h3>Ranking Seven Games</h3>
       <ul id="ranking-list">
-        <!-- Exemplo de item -->
-        <!--
-        <li>
-          <img src="avatar.jpg" alt="Avatar" />
-          <span class="name">João Silva</span>
-          <span class="points">120 pts</span>
-        </li>
-        -->
       </ul>
     </div>
 
     <div class="participar">
-      <button id="login-google">Participar do Seven Games com Google</button>
+      <button id="login-google">Participar do Seven Games</button>
+      <a href="ranking.php">Seven Ranking</a>
     </div>
   </section>
 
@@ -487,6 +495,7 @@
     </div>
 
     <p>Copyright 2025 | Todos direitos reservados.</p>
+    <span class="acessos">Total de acessos ao site: <?= $total ?></span>
   </footer>
 
   <!-- Button Whatsapp -->

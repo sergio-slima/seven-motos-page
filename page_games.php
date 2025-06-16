@@ -107,6 +107,19 @@ $jogos = [
       text-decoration: none;
       border-radius: 6px;
     }
+    @media (max-width: 600px) {
+      .jogos {
+        width: 100%;
+        padding: 10px;
+      }
+      .perfil img {
+        width: 80px;
+      }
+      .jogo a {
+        font-size: 14px;
+        padding: 6px 12px;
+      }
+    }
   </style>
 </head>
 <body>

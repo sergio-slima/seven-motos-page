@@ -23,8 +23,8 @@ if ($res->num_rows === 0) {
 $usuario_id = $res->fetch_assoc()['id'];
 
 // Atualiza pontuação (só se for maior)
-$conn->query("INSERT INTO pontuacoes (usuario_id, jogo, pontos)
-              VALUES ($usuario_id, '$jogo', $pontos)
-              ON DUPLICATE KEY UPDATE pontos = GREATEST(pontos, $pontos)");
+$stmt = $conn->prepare("INSERT INTO pontuacoes (usuario_id, jogo, pontos) VALUES (?, ?, ?)");
+$stmt->bind_param("isi", $usuario_id, $jogo, $pontos);
+$stmt->execute();
 
 echo "Pontuação salva com sucesso!";
